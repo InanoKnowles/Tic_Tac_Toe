@@ -4,100 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
     <title>Project 1: Tic Tac Toe</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./ticTacToe.js"></script>
-   <!-- CSS Area -->
-    <style>
-        /* ! Issue why isn't * turning my boxes into a grid with Display: grid;? */
-        /* Because we need a div container to hold the boxes I want to use as a grid and then I need to use grid-template-columns to makes columns*/
-        .container {
-            display: grid;
-            grid-template-columns: 1fr  1fr  1fr;
-        }
-
-        .box {
-            border: 3px solid black;
-            height: 100px;
-            width: 100px;
-        }
-    </style>
+    <link rel=¨stylesheet¨ href=¨style.css¨>
 </head>
-        <!-- HTML AREA -->
+     
 <body>
  <!-- 2. We now need to make the boxes line up: 3 by 3 -->   
- <span class="container">
-    <!-- 1. We need a grid with 9 boxes -->
-    <div class="box" id="box1"> </div>
-    <div class="box" id="box2"> </div>
-    <div class="box" id="box3"> </div>
-    <div class="box" id="box4"> </div>
-    <div class="box" id="box5"> </div>
-    <div class="box" id="box6"> </div>
-    <div class="box" id="box7"> </div>
-    <div class="box" id="box8"> </div>
-    <div class="box" id="box9"> </div>
-
-</span>  
-    
-    <!-- JAVASCRIPT AREA -->
-    <!-- 3. We now need to be able to find the boxes -->
-    <script>
-    var allBoxes =  document.querySelectorAll('.box')
-        console.log(allBoxes[0])
-    // [div.box, div.box, div.box, div.box, div.box, div.box, div.box, div.box, div.box]
-var click = 1
-  for (let i = 0; i < allBoxes.length; i++) {  
-    allBoxes[i].addEventListener('click', function (event) {
-        event.preventDefault
-        // 4. Check that each box responds when clicked
-        // console.log(allBoxes[i] + "meow")
-        // 5. Now we need to make it so that when clicked an X appears
-        // allBoxes[i].textContent="X"
-        // 6. Now we need to make it so that when clicked an O appears
-        // allBoxes[i].textContent="O"
-        // ! Issue with both X and O on click only one is accepted and that is O
-        // 7. We need to be able to tell which click is X and which click is O - How can we do that? My thoughts:
-        // - create 2 variables and assign each variable with an X or an O then we could create a rule that if X clicks then its O's turn to click (if)
-        
-        console.log(click)
-        if (click % 2 === 0){
-            allBoxes[i].textContent="O"
-            click++
-        } else {
-            allBoxes[i].textContent="X"
-            click++
-        }
-        // We used modulus 2 because that will give us remainder 0 for every even number and if its an odd number it gives remainder 1
-        // There are 8 winning conditions:
-        if (document.querySelector('#box1').textContent !== " " && document.querySelector('#box1').textContent === document.querySelector('#box2').textContent && document.querySelector('#box3').textContent === document.querySelector('#box1').textContent) {
-            alert(document.querySelector('#box1').textContent + " YOU WON!!!")
-            // Win Condition: 1,2,3 (ABOVE THIS LINE)
-        } else if (document.querySelector('#box4').textContent != " " && document.querySelector('#box4').textContent === document.querySelector('#box5').textContent && document.querySelector('#box6').textContent === document.querySelector('#box4').textContent) {
-            alert(document.querySelector('#box4').textContent + " YOU WON!!!")
-            // Win Condition: 4,5,6 (ABOVE THIS LINE)
-        } else if (document.querySelector('#box7').textContent != " " && document.querySelector('#box7').textContent === document.querySelector('#box8').textContent && document.querySelector('#box9').textContent === document.querySelector('#box7').textContent) {
-            alert(document.querySelector('#box7').textContent + " YOU WON!!!")
-            // Win Condition: 7,8,9 (ABOVE THIS LINE)
-        }  else if (document.querySelector('#box1').textContent != " " && document.querySelector('#box1').textContent === document.querySelector('#box4').textContent && document.querySelector('#box7').textContent === document.querySelector('#box1').textContent) {
-            alert(document.querySelector('#box1').textContent + " YOU WON!!!")
-             // Win Condition: 1,4,7 (ABOVE THIS LINE)
-        }  else if (document.querySelector('#box2').textContent != " " && document.querySelector('#box2').textContent === document.querySelector('#box5').textContent && document.querySelector('#box8').textContent === document.querySelector('#box2').textContent) {
-            alert(document.querySelector('#box2').textContent + " YOU WON!!!")
-            // Win Condition: 2,5,8 (ABOVE THIS LINE)
-        } else if (document.querySelector('#box3').textContent != " " && document.querySelector('#box3').textContent === document.querySelector('#box6').textContent && document.querySelector('#box9').textContent === document.querySelector('#box3').textContent) {
-            alert(document.querySelector('#box3').textContent + " YOU WON!!!")
-            // Win Condition:3, 6, 9 (ABOVE THIS LINE)
-        }  else if (document.querySelector('#box1').textContent != " " && document.querySelector('#box1').textContent === document.querySelector('#box5').textContent && document.querySelector('#box9').textContent === document.querySelector('#box1').textContent) {
-            alert(document.querySelector('#box1').textContent + " YOU WON!!!")
-            // Win Condition: 1,5,9(ABOVE THIS LINE)
-        } else if (document.querySelector('#box3').textContent != " " && document.querySelector('#box3').textContent === document.querySelector('#box5').textContent && document.querySelector('#box7').textContent === document.querySelector('#box3').textContent) {
-            alert(document.querySelector('#box3').textContent + " YOU WON!!!")
-            // Win Condition: (ABOVE THIS LINE)
-        }
-    })
-}
-// for some reason when I tried to separate all my parts - it did not work anymore even with the html being linked to css and js
-    </script>
+    <span class="container">
+            <!-- 1. We need a grid with 9 boxes -->
+         <div class="box" id="box1"> </div>
+         <div class="box" id="box2"> </div>
+         <div class="box" id="box3"> </div>
+         <div class="box" id="box4"> </div>
+         <div class="box" id="box5"> </div>
+         <div class="box" id="box6"> </div>
+         <div class="box" id="box7"> </div>
+         <div class="box" id="box8"> </div>
+         <div class="box" id="box9"> </div>
+     </span>  
 </body>
+
 </html>
