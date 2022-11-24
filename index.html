@@ -7,23 +7,29 @@
     <script defer src="main.js"></script>
     <title>Project 1: Tic Tac Toe</title>
     <link rel="stylesheet" href="./style.css">
+    
 </head>
      
 <body onload="playGame()">
- <!-- 2. We now need to make the boxes line up: 3 by 3 --> 
     <header> 
     <div class="gameName">
         <h1>TIC TAC TOE</h1>
     </div>    
     </header>
+
+
     <div class="players">
-        <div class="playerOne">PLAYER ONE</div>
-        <div class="playerTwo">PLAYER TWO</div>
+
+        <div class="playerOne"><h2>PLAYER ONE</h2>
+        
+        </div>
+
+        <div class="playerTwo"><h2>PLAYER TWO</h2></div>
+
         <div class="drawPlayers"></div>
     </div>
     <div class="winnerToken"></div>
     <span class="container">
-            <!-- 1. We need a grid with 9 boxes -->
          <div class="box" id="box1"> </div>
          <div class="box" id="box2"> </div>
          <div class="box" id="box3"> </div>

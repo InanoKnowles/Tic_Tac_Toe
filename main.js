@@ -73,7 +73,7 @@ function playGame() {
             } 
             document.querySelector(".reset").removeAttribute("hidden")
         }
-
+        
         console.log(allBoxes[0].textContent)
         // Below is the 8 WIN conditions:
         if (document.querySelector('#box1').textContent !== " " && document.querySelector('#box1').textContent === document.querySelector('#box2').textContent && document.querySelector('#box3').textContent === document.querySelector('#box1').textContent) {
@@ -121,6 +121,7 @@ function playGame() {
         console.log("This round is a DRAW - Good Game")
         document.querySelector('.drawPlayers').style.color="red"
         document.querySelector('.drawPlayers').textContent="THAT WAS A DRAW, BOTH PLAYERS SUCK!"
+        document.querySelector('.container').style.backgroundColor ="red"
         document.querySelector(".reset").removeAttribute("hidden")
         } 
     })
