@@ -24,7 +24,7 @@ My first project with General Assembly is to create a game called Tic Tac Toe.
 - Broke down the steps into manageable chunks and found anything else that was a bit toooo chunky and broke those steps down some more
 - Wireframed what I would like the game to look like
 
-<img src="https://web.whatsapp.com/b8d346d7-e8c4-4da0-ad47-5e05499759d0" alt="planning"/>
+<img src="https://imgur.com/a/mZUanBV" alt="planning"/>
 
 ## :rocket: Cool tech
 
