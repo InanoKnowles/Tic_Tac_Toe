@@ -62,14 +62,14 @@ function playGame() {
             var winPlayer = document.querySelector(win1).textContent
             if (winPlayer == 'X'){
                 document.querySelector('.playerOne').style.color="green"
-                document.querySelector('.playerOne').textContent ="PLAYER ONE WINS!"
+                document.querySelector('.playerOne').textContent ="PLAYER ONE 'X' WINS!"
                 document.querySelector('.playerTwo').style.color="red"
-                document.querySelector('.playerTwo').textContent ="PLAYER TWO LOSES HAHA!"
+                document.querySelector('.playerTwo').textContent ="PLAYER TWO 'O' LOSES HAHA!"
             } else {
                 document.querySelector('.playerOne').style.color="red"
-                document.querySelector('.playerOne').textContent ="PLAYER ONE LOSES HAHA!"
+                document.querySelector('.playerOne').textContent ="PLAYER ONE 'X' LOSES HAHA!"
                 document.querySelector('.playerTwo').style.color="green"
-                document.querySelector('.playerTwo').textContent ="PLAYER TWO WINS!"
+                document.querySelector('.playerTwo').textContent ="PLAYER TWO 'O' WINS!"
             } 
             document.querySelector(".reset").removeAttribute("hidden")
         }
