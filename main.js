@@ -32,7 +32,7 @@ allBoxes[i].addEventListener('click', function (event) {
 
     // Step 1 -  what coding structure? if statement
     // Step 2 -  what condition - all the divs called box need to have a value
-    // Step 3 do what - if all filled declare this round a draw
+    // Step 3 do what - if all filled declare this round a draw so we bumped into a bug in the draw condition when I get 3 'X's to line up it will say draw and x wins
 
     // console.log(allBoxes[0].textContent)
     // console.log(allBoxes[1].textContent)
@@ -44,17 +44,12 @@ allBoxes[i].addEventListener('click', function (event) {
     // console.log(allBoxes[7].textContent)
     // console.log(allBoxes[8].textContent)
 
-    if (allBoxes[0].textContent !== " "
-     && allBoxes[1].textContent !== " "
-     && allBoxes[2].textContent !== " "
-     && allBoxes[3].textContent !== " "
-     && allBoxes[4].textContent !== " "
-     && allBoxes[5].textContent !== " "
-     && allBoxes[6].textContent !== " "
-     && allBoxes[7].textContent !== " "
-     && allBoxes[8].textContent !== " "){
-        alert("This round is a DRAW - Good Game")
-    }
+  
+
+    // win condition first - when I put my draw condition below the win condition it doesnt work anymore -_-
+    // then draw condition
+    // remove alerts and find a more suitable way to do it 
+
     // if (document.querySelectorAll('.box').textContent !== " ") {
      
     //     console.log("This round was a draw - Good Game!")
@@ -85,8 +80,22 @@ allBoxes[i].addEventListener('click', function (event) {
         // Win Condition: 1,5,9(ABOVE THIS LINE)
     } else if (document.querySelector('#box3').textContent != " " && document.querySelector('#box3').textContent === document.querySelector('#box5').textContent && document.querySelector('#box7').textContent === document.querySelector('#box3').textContent) {
         alert(document.querySelector('#box3').textContent + " YOU WON!!!")
-        // Win Condition: (ABOVE THIS LINE)
-    }
+        // Win Condition: 3, 5, 7 (ABOVE THIS LINE)
+    } else if (allBoxes[0].textContent !== " "
+    && allBoxes[1].textContent !== " "
+    && allBoxes[2].textContent !== " "
+    && allBoxes[3].textContent !== " "
+    && allBoxes[4].textContent !== " "
+    && allBoxes[5].textContent !== " "
+    && allBoxes[6].textContent !== " "
+    && allBoxes[7].textContent !== " "
+    && allBoxes[8].textContent !== " ") {
+       alert("This round is a DRAW - Good Game")
+    } 
 })
 }
+
+
+
+
 
